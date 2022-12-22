@@ -109,6 +109,8 @@ class Formula:
         Returns:
             The standard string representation of the current formula.
         """
+        if is_variable(self.root) or is_constant(self.root):
+            return self.root
         # Task 1.1
 
     def __eq__(self, other: object) -> bool:
