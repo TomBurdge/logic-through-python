@@ -113,6 +113,8 @@ class Formula:
             return self.root
         if is_unary(self.root):
             return '~'+repr(self.first)
+        if is_binary(self.root):
+            return f'({repr(self.first)}{self.root}{repr(self.second)})'
         # Task 1.1
 
     def __eq__(self, other: object) -> bool:
