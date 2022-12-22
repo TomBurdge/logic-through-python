@@ -111,6 +111,8 @@ class Formula:
         """
         if is_variable(self.root) or is_constant(self.root):
             return self.root
+        if is_unary(self.root):
+            return '~'+repr(self.first)
         # Task 1.1
 
     def __eq__(self, other: object) -> bool:
